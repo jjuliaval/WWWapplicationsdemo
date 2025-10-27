@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SafeStore - Secure Note Management</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>SafeStore</h1>
+            <div id="user-info" class="user-info hidden">
+                <span id="current-user"></span>
+                <button id="logout-btn" class="btn btn-secondary">Logout</button>
+            </div>
+        </header>
+
+        <!-- Authentication Section -->
+        <div id="auth-section" class="auth-section">
+            <div class="auth-tabs">
+                <button id="login-tab" class="tab-btn active">Login</button>
+                <button id="register-tab" class="tab-btn">Register</button>
+            </div>
+
+            <form id="login-form" class="auth-form">
+                <h2>Login</h2>
+                <input type="email" id="login-email" placeholder="Email" required>
+                <input type="password" id="login-password" placeholder="Password" required>
+                <button type="submit" class="btn btn-primary">Login</button>
+            </form>
+
+            <form id="register-form" class="auth-form hidden">
+                <h2>Register</h2>
+                <input type="email" id="register-email" placeholder="Email" required>
+                <input type="password" id="register-password" placeholder="Password" required>
+                <label class="checkbox-label">
+                    <input type="checkbox" id="admin-role"> Admin Role
+                </label>
+                <button type="submit" class="btn btn-primary">Register</button>
+            </form>
+        </div>
+
+        <!-- Main Application -->
+        <div id="main-app" class="main-app hidden">
+            <nav class="nav-tabs">
+                <button id="notes-tab" class="nav-btn active">Notes</button>
+                <button id="files-tab" class="nav-btn">Files</button>
+                <button id="images-tab" class="nav-btn">Images</button>
+                <button id="admin-tab" class="nav-btn hidden">Admin</button>
+                <button id="audit-tab" class="nav-btn">Audit Log</button>
+            </nav>
+
+            <!-- Notes Section -->
+            <div id="notes-section" class="section">
+                <div class="section-header">
+                    <h2>Notes</h2>
+                    <button id="new-note-btn" class="btn btn-primary">New Note</button>
+                </div>
+                
+                <div class="search-bar">
+                    <input type="text" id="search-input" placeholder="Search notes...">
+                </div>
+
+                <div id="notes-list" class="notes-list"></div>
+
+                <div id="note-editor" class="note-editor hidden">
+                    <input type="text" id="note-title" placeholder="Note title...">
+                    <div id="note-content" contenteditable="true" placeholder="Write your note here..."></div>
+                    <div class="editor-actions">
+                        <button id="save-note-btn" class="btn btn-primary">Save</button>
+                        <button id="cancel-edit-btn" class="btn btn-secondary">Cancel</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Files Section -->
+            <div id="files-section" class="section hidden">
+                <div class="section-header">
+                    <h2>Files</h2>
+                    <input type="file" id="file-input" multiple>
+                </div>
+                <div id="files-list" class="files-list"></div>
+            </div>
+
+            <!-- Images Section -->
+            <div id="images-section" class="section hidden">
+                <div class="section-header">
+                    <h2>Remote Image Preview</h2>
+                </div>
+                <div class="image-input">
+                    <input type="url" id="image-url" placeholder="Enter image URL...">
+                    <button id="preview-btn" class="btn btn-primary">Preview</button>
+                </div>
+                <div id="image-status" class="status-message"></div>
+                <div id="image-preview" class="image-preview"></div>
+            </div>
+
+            <!-- Admin Section -->
+            <div id="admin-section" class="section hidden">
+                <h2>Admin Panel</h2>
+                <div class="admin-tabs">
+                    <button id="admin-users-tab" class="tab-btn active">Users</button>
+                    <button id="admin-notes-tab" class="tab-btn">All Notes</button>
+                    <button id="admin-files-tab" class="tab-btn">All Files</button>
+                </div>
+                <div id="admin-content" class="admin-content"></div>
+            </div>
+
+            <!-- Audit Log Section -->
+            <div id="audit-section" class="section hidden">
+                <h2>Audit Log</h2>
+                <div id="audit-log" class="audit-log"></div>
+            </div>
+        </div>
+
+        <div id="message" class="message"></div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
