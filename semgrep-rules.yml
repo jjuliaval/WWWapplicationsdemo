@@ -1,0 +1,29 @@
+rules:
+  - id: js-unsafe-innerhtml
+    patterns:
+      - pattern: $X.innerHTML = $Y
+    message: "Direct assignment to innerHTML — potential XSS; consider sanitization or textContent"
+    languages: [javascript]
+    severity: ERROR
+
+  - id: js-localstorage-password
+    patterns:
+      - pattern: localStorage.setItem($KEY, $VALUE)
+    message: "localStorage used — ensure no plaintext passwords or secrets stored"
+    languages: [javascript]
+    severity: WARNING
+
+  - id: js-eval
+    patterns:
+      - pattern: eval($EXPR)
+      - pattern: new Function($EXPR)
+    message: "Use of eval/new Function is dangerous"
+    languages: [javascript]
+    severity: ERROR
+
+  - id: js-fetch-user-url
+    patterns:
+      - pattern: fetch($URL)
+    message: "fetch() of user-supplied URL — ensure proper validation"
+    languages: [javascript]
+    severity: WARNING

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SafeStore (MVP)</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script defer src="app.js"></script>
+</head>
+<body>
+  <header class="app-header">
+    <h1>SafeStore</h1>
+    <div id="userBar" class="user-bar">
+      <span id="userStatus">Not logged in</span>
+      <button id="logoutBtn" class="btn small hidden">Logout</button>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- Auth -->
+    <section id="authSection" class="card">
+      <h2>Authentication</h2>
+      <div class="grid-2">
+        <form id="registerForm" class="form">
+          <h3>Register</h3>
+          <label>Email <input id="regEmail" type="email" required /></label>
+          <label>Password <input id="regPassword" type="password" required /></label>
+          <label>Role
+            <select id="regRole">
+              <option value="user">User</option>
+              <option value="admin">Admin</option>
+            </select>
+          </label>
+          <button type="submit" class="btn">Register</button>
+          <p class="hint">Client-only demo; data stored in your browser.</p>
+        </form>
+
+        <form id="loginForm" class="form">
+          <h3>Login</h3>
+          <label>Email <input id="loginEmail" type="email" required /></label>
+          <label>Password <input id="loginPassword" type="password" required /></label>
+          <button type="submit" class="btn">Login</button>
+          <div id="authMsg" class="status"></div>
+        </form>
+      </div>
+    </section>
+
+    <!-- Notes -->
+    <section id="notesSection" class="card hidden">
+      <div class="section-head">
+        <h2>Notes</h2>
+        <input id="noteSearchInput" class="search" type="search" placeholder="Search notes..." />
+      </div>
+      <div class="grid-2">
+        <div>
+          <ul id="notesList" class="list"></ul>
+        </div>
+        <div>
+          <div class="editor">
+            <input id="noteTitleInput" class="title-input" type="text" placeholder="Note title" />
+            <div id="noteContentEditable" class="contenteditable" contenteditable="true" aria-label="Note content"></div>
+            <div class="editor-actions">
+              <button id="saveNoteBtn" class="btn">Save</button>
+              <button id="newNoteBtn" class="btn">New</button>
+              <button id="deleteNoteBtn" class="btn danger">Delete</button>
+              <span id="noteMsg" class="status"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Files -->
+    <section id="filesSection" class="card hidden">
+      <h2>File Metadata</h2>
+      <div class="form-inline">
+        <input id="fileInput" type="file" />
+        <span id="fileMsg" class="status"></span>
+      </div>
+      <ul id="fileList" class="list"></ul>
+    </section>
+
+    <!-- Remote Image Preview -->
+    <section id="imageSection" class="card hidden">
+      <h2>Remote Image Preview</h2>
+      <div class="form-inline">
+        <input id="imageUrlInput" type="url" placeholder="Paste image URL (https://...)" />
+        <button id="previewImageBtn" class="btn">Preview</button>
+        <span id="imageFetchStatus" class="status"></span>
+      </div>
+      <img id="imagePreview" class="preview" alt="Remote preview" />
+    </section>
+
+    <!-- Admin Panel -->
+    <section id="adminSection" class="card hidden">
+      <h2>Admin Panel</h2>
+      <p class="hint">Visible to admin users only.</p>
+      <div class="grid-3">
+        <div>
+          <h3>Users</h3>
+          <ul id="adminUsersList" class="list"></ul>
+        </div>
+        <div>
+          <h3>All Notes</h3>
+          <ul id="adminNotesList" class="list"></ul>
+        </div>
+        <div>
+          <h3>All Files</h3>
+          <ul id="adminFilesList" class="list"></ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Audit Log -->
+    <section id="auditSection" class="card">
+      <h2>Audit Log</h2>
+      <ul id="auditLogList" class="list"></ul>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <small>SafeStore: pure static demo. Data lives in localStorage.</small>
+  </footer>
+</body>
+</html>

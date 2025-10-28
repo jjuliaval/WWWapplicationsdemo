@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SafeStore - Secure Note Storage</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="app">
+        <!-- Auth Section -->
+        <div id="auth-section" class="section">
+            <h1>SafeStore</h1>
+            
+            <!-- Login Form -->
+            <div id="login-form" class="auth-form">
+                <h2>Login</h2>
+                <form id="login">
+                    <input type="email" id="login-email" placeholder="Email" required>
+                    <input type="password" id="login-password" placeholder="Password" required>
+                    <button type="submit">Login</button>
+                </form>
+                <p>Don't have an account? <a href="#" id="show-register">Register</a></p>
+            </div>
+
+            <!-- Register Form -->
+            <div id="register-form" class="auth-form" style="display: none;">
+                <h2>Register</h2>
+                <form id="register">
+                    <input type="email" id="register-email" placeholder="Email" required>
+                    <input type="password" id="register-password" placeholder="Password" required>
+                    <div class="role-select">
+                        <label>
+                            <input type="checkbox" id="register-admin"> Admin Role
+                        </label>
+                    </div>
+                    <button type="submit">Register</button>
+                </form>
+                <p>Already have an account? <a href="#" id="show-login">Login</a></p>
+            </div>
+        </div>
+
+        <!-- Main App Section -->
+        <div id="app-section" class="section" style="display: none;">
+            <header>
+                <h1>SafeStore</h1>
+                <div class="user-info">
+                    <span id="user-email"></span>
+                    <span id="user-role"></span>
+                    <button id="logout-btn">Logout</button>
+                </div>
+            </header>
+
+            <!-- Navigation -->
+            <nav class="tabs">
+                <button class="tab-btn active" data-tab="notes">Notes</button>
+                <button class="tab-btn" data-tab="files">Files</button>
+                <button class="tab-btn" data-tab="remote">Remote Images</button>
+                <button class="tab-btn admin-only" data-tab="admin" style="display: none;">Admin Panel</button>
+                <button class="tab-btn" data-tab="audit">Audit Log</button>
+            </nav>
+
+            <!-- Search -->
+            <div class="search-container">
+                <input type="text" id="search-input" placeholder="Search notes...">
+            </div>
+
+            <!-- Tab Contents -->
+            <div class="tab-content">
+                <!-- Notes Tab -->
+                <div id="notes-tab" class="tab-pane active">
+                    <div class="notes-header">
+                        <h2>Your Notes</h2>
+                        <button id="new-note-btn">New Note</button>
+                    </div>
+                    
+                    <div id="notes-list"></div>
+                    
+                    <div id="note-editor" style="display: none;">
+                        <h3 id="editor-title">New Note</h3>
+                        <input type="text" id="note-title" placeholder="Note title">
+                        <div 
+                            id="note-content" 
+                            contenteditable="true" 
+                            placeholder="Write your note here..."
+                        ></div>
+                        <div class="editor-actions">
+                            <button id="save-note">Save</button>
+                            <button id="cancel-edit">Cancel</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Files Tab -->
+                <div id="files-tab" class="tab-pane">
+                    <h2>Uploaded Files</h2>
+                    <div class="file-upload">
+                        <input type="file" id="file-input">
+                        <button id="upload-btn">Upload File</button>
+                    </div>
+                    <div id="files-list"></div>
+                </div>
+
+                <!-- Remote Images Tab -->
+                <div id="remote-tab" class="tab-pane">
+                    <h2>Remote Image Preview</h2>
+                    <div class="remote-input">
+                        <input type="url" id="image-url" placeholder="Enter image URL">
+                        <button id="preview-btn">Preview</button>
+                    </div>
+                    <div id="image-preview"></div>
+                    <div id="preview-status"></div>
+                </div>
+
+                <!-- Admin Panel Tab -->
+                <div id="admin-tab" class="tab-pane">
+                    <h2>Admin Panel</h2>
+                    
+                    <div class="admin-section">
+                        <h3>Users</h3>
+                        <div id="users-list"></div>
+                    </div>
+                    
+                    <div class="admin-section">
+                        <h3>All Notes</h3>
+                        <div id="all-notes-list"></div>
+                    </div>
+                    
+                    <div class="admin-section">
+                        <h3>All Files</h3>
+                        <div id="all-files-list"></div>
+                    </div>
+                </div>
+
+                <!-- Audit Log Tab -->
+                <div id="audit-tab" class="tab-pane">
+                    <h2>Audit Log</h2>
+                    <div id="audit-log"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

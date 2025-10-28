@@ -1,0 +1,442 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f5f5f5;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    padding: 20px 0;
+    border-bottom: 2px solid #e0e0e0;
+}
+
+h1 {
+    color: #2c3e50;
+    font-size: 2.5em;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.hidden {
+    display: none !important;
+}
+
+/* Authentication Styles */
+.auth-section {
+    max-width: 400px;
+    margin: 0 auto;
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.auth-tabs {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.tab-btn, .nav-btn {
+    flex: 1;
+    padding: 12px;
+    border: none;
+    background: #f8f9fa;
+    cursor: pointer;
+    border-bottom: 3px solid transparent;
+    transition: all 0.3s;
+}
+
+.tab-btn.active, .nav-btn.active {
+    background: white;
+    border-bottom-color: #3498db;
+    color: #3498db;
+}
+
+.auth-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.auth-form h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #2c3e50;
+}
+
+input[type="email"], input[type="password"], input[type="text"], input[type="url"] {
+    padding: 12px;
+    border: 2px solid #e0e0e0;
+    border-radius: 4px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+
+input:focus {
+    outline: none;
+    border-color: #3498db;
+}
+
+.checkbox-label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+}
+
+/* Button Styles */
+.btn {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 0.3s;
+}
+
+.btn-primary {
+    background: #3498db;
+    color: white;
+}
+
+.btn-primary:hover {
+    background: #2980b9;
+}
+
+.btn-secondary {
+    background: #95a5a6;
+    color: white;
+}
+
+.btn-secondary:hover {
+    background: #7f8c8d;
+}
+
+.btn-danger {
+    background: #e74c3c;
+    color: white;
+}
+
+.btn-danger:hover {
+    background: #c0392b;
+}
+
+/* Main App Styles */
+.main-app {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    overflow: hidden;
+}
+
+.nav-tabs {
+    display: flex;
+    background: #f8f9fa;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.section {
+    padding: 30px;
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.section-header h2 {
+    color: #2c3e50;
+}
+
+/* Search Bar */
+.search-bar {
+    margin-bottom: 20px;
+}
+
+.search-bar input {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #e0e0e0;
+    border-radius: 4px;
+}
+
+/* Notes Styles */
+.notes-list {
+    display: grid;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.note-item {
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 6px;
+    border-left: 4px solid #3498db;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.note-item:hover {
+    background: #e9ecef;
+    transform: translateY(-2px);
+}
+
+.note-title {
+    font-weight: bold;
+    font-size: 1.1em;
+    margin-bottom: 8px;
+    color: #2c3e50;
+}
+
+.note-preview {
+    color: #666;
+    font-size: 0.9em;
+    line-height: 1.4;
+}
+
+.note-actions {
+    margin-top: 10px;
+    display: flex;
+    gap: 10px;
+}
+
+.note-actions button {
+    padding: 6px 12px;
+    font-size: 14px;
+}
+
+/* Note Editor */
+.note-editor {
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 6px;
+    margin-top: 20px;
+}
+
+.note-editor input {
+    width: 100%;
+    margin-bottom: 15px;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+#note-content {
+    min-height: 200px;
+    padding: 15px;
+    border: 2px solid #e0e0e0;
+    border-radius: 4px;
+    background: white;
+    margin-bottom: 15px;
+}
+
+#note-content:focus {
+    outline: none;
+    border-color: #3498db;
+}
+
+.editor-actions {
+    display: flex;
+    gap: 10px;
+}
+
+/* Files Styles */
+.files-list {
+    display: grid;
+    gap: 15px;
+}
+
+.file-item {
+    background: #f8f9fa;
+    padding: 15px;
+    border-radius: 6px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.file-info {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.file-name {
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+.file-meta {
+    font-size: 0.9em;
+    color: #666;
+}
+
+/* Image Preview */
+.image-input {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.image-input input {
+    flex: 1;
+}
+
+.image-preview img {
+    max-width: 100%;
+    max-height: 400px;
+    border-radius: 6px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.status-message {
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 15px;
+}
+
+.status-message.success {
+    background: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.status-message.error {
+    background: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+/* Admin Panel */
+.admin-tabs {
+    display: flex;
+    margin-bottom: 20px;
+    background: #f8f9fa;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.admin-content {
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 6px;
+}
+
+.admin-list {
+    display: grid;
+    gap: 10px;
+}
+
+.admin-item {
+    background: white;
+    padding: 15px;
+    border-radius: 4px;
+    border-left: 4px solid #3498db;
+}
+
+/* Audit Log */
+.audit-log {
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 6px;
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+.audit-entry {
+    background: white;
+    padding: 12px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    border-left: 4px solid #27ae60;
+}
+
+.audit-timestamp {
+    font-size: 0.8em;
+    color: #666;
+    margin-bottom: 5px;
+}
+
+.audit-action {
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+.audit-details {
+    font-size: 0.9em;
+    color: #666;
+    margin-top: 5px;
+}
+
+/* Message */
+.message {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 15px 20px;
+    border-radius: 4px;
+    color: white;
+    font-weight: bold;
+    z-index: 1000;
+    transform: translateX(100%);
+    transition: transform 0.3s;
+}
+
+.message.show {
+    transform: translateX(0);
+}
+
+.message.success {
+    background: #27ae60;
+}
+
+.message.error {
+    background: #e74c3c;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+    
+    .nav-tabs {
+        flex-wrap: wrap;
+    }
+    
+    .nav-btn {
+        flex: 1;
+        min-width: 120px;
+    }
+    
+    .section-header {
+        flex-direction: column;
+        gap: 15px;
+        align-items: stretch;
+    }
+    
+    .image-input {
+        flex-direction: column;
+    }
+}

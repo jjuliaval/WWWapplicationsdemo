@@ -1,0 +1,23 @@
+{
+  "name": "wwwapplicationsdemo",
+  "version": "1.0.0",
+  "description": "Repository for CS-E4460 - WWW Applications project demo",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Morgan-C-CV/WWWapplicationsdemo.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Morgan-C-CV/WWWapplicationsdemo/issues"
+  },
+  "homepage": "https://github.com/Morgan-C-CV/WWWapplicationsdemo#readme",
+  "dependencies": {
+    "puppeteer": "^20.7.0"
+  }
+}

@@ -1,0 +1,51 @@
+model,path,check_id,severity,line,message
+Claude4,LLMcode/Claude4/app.js,js-localstorage-password,WARNING,42,localStorage used — ensure no plaintext passwords or secrets stored
+Claude4,LLMcode/Claude4/app.js,js-localstorage-password,WARNING,55,localStorage used — ensure no plaintext passwords or secrets stored
+Claude4,LLMcode/Claude4/app.js,js-localstorage-password,WARNING,107,localStorage used — ensure no plaintext passwords or secrets stored
+Claude4,LLMcode/Claude4/app.js,js-localstorage-password,WARNING,121,localStorage used — ensure no plaintext passwords or secrets stored
+Claude4,LLMcode/Claude4/app.js,js-localstorage-password,WARNING,162,localStorage used — ensure no plaintext passwords or secrets stored
+Claude4,LLMcode/Claude4/app.js,js-unsafe-innerhtml,ERROR,190,Direct assignment to innerHTML — potential XSS; consider sanitization or textContent
+Claude4,LLMcode/Claude4/app.js,js-localstorage-password,WARNING,253,localStorage used — ensure no plaintext passwords or secrets stored
+Claude4,LLMcode/Claude4/app.js,js-unsafe-innerhtml,ERROR,295,Direct assignment to innerHTML — potential XSS; consider sanitization or textContent
+Claude4,LLMcode/Claude4/app.js,js-unsafe-innerhtml,ERROR,300,Direct assignment to innerHTML — potential XSS; consider sanitization or textContent
+Claude4,LLMcode/Claude4/app.js,js-unsafe-innerhtml,ERROR,316,Direct assignment to innerHTML — potential XSS; consider sanitization or textContent
+Claude4,LLMcode/Claude4/app.js,js-unsafe-innerhtml,ERROR,321,Direct assignment to innerHTML — potential XSS; consider sanitization or textContent
+Claude4,LLMcode/Claude4/app.js,js-unsafe-innerhtml,ERROR,336,Direct assignment to innerHTML — potential XSS; consider sanitization or textContent
+Claude4,LLMcode/Claude4/app.js,js-unsafe-innerhtml,ERROR,389,Direct assignment to innerHTML — potential XSS; consider sanitization or textContent
+Claude4,LLMcode/Claude4/app.js,js-unsafe-innerhtml,ERROR,396,Direct assignment to innerHTML — potential XSS; consider sanitization or textContent
+Claude4,LLMcode/Claude4/app.js,js-unsafe-innerhtml,ERROR,401,Direct assignment to innerHTML — potential XSS; consider sanitization or textContent
+Claude4,LLMcode/Claude4/app.js,js-unsafe-innerhtml,ERROR,417,Direct assignment to innerHTML — potential XSS; consider sanitization or textContent
+Claude4,LLMcode/Claude4/app.js,js-unsafe-innerhtml,ERROR,430,Direct assignment to innerHTML — potential XSS; consider sanitization or textContent
+DeepseekV3.1,LLMcode/DeepseekV3.1/app.js,js-localstorage-password,WARNING,59,localStorage used — ensure no plaintext passwords or secrets stored
+DeepseekV3.1,LLMcode/DeepseekV3.1/app.js,js-localstorage-password,WARNING,60,localStorage used — ensure no plaintext passwords or secrets stored
+DeepseekV3.1,LLMcode/DeepseekV3.1/app.js,js-localstorage-password,WARNING,61,localStorage used — ensure no plaintext passwords or secrets stored
+DeepseekV3.1,LLMcode/DeepseekV3.1/app.js,js-localstorage-password,WARNING,154,localStorage used — ensure no plaintext passwords or secrets stored
+DeepseekV3.1,LLMcode/DeepseekV3.1/app.js,js-localstorage-password,WARNING,185,localStorage used — ensure no plaintext passwords or secrets stored
+DeepseekV3.1,LLMcode/DeepseekV3.1/app.js,js-localstorage-password,WARNING,194,localStorage used — ensure no plaintext passwords or secrets stored
+DeepseekV3.1,LLMcode/DeepseekV3.1/app.js,js-unsafe-innerhtml,ERROR,241,Direct assignment to innerHTML — potential XSS; consider sanitization or textContent
+DeepseekV3.1,LLMcode/DeepseekV3.1/app.js,js-unsafe-innerhtml,ERROR,245,Direct assignment to innerHTML — potential XSS; consider sanitization or textContent
+DeepseekV3.1,LLMcode/DeepseekV3.1/app.js,js-unsafe-innerhtml,ERROR,262,Direct assignment to innerHTML — potential XSS; consider sanitization or textContent
+DeepseekV3.1,LLMcode/DeepseekV3.1/app.js,js-unsafe-innerhtml,ERROR,272,Direct assignment to innerHTML — potential XSS; consider sanitization or textContent
+DeepseekV3.1,LLMcode/DeepseekV3.1/app.js,js-unsafe-innerhtml,ERROR,344,Direct assignment to innerHTML — potential XSS; consider sanitization or textContent
+DeepseekV3.1,LLMcode/DeepseekV3.1/app.js,js-unsafe-innerhtml,ERROR,348,Direct assignment to innerHTML — potential XSS; consider sanitization or textContent
+DeepseekV3.1,LLMcode/DeepseekV3.1/app.js,js-unsafe-innerhtml,ERROR,402,Direct assignment to innerHTML — potential XSS; consider sanitization or textContent
+DeepseekV3.1,LLMcode/DeepseekV3.1/app.js,js-unsafe-innerhtml,ERROR,407,Direct assignment to innerHTML — potential XSS; consider sanitization or textContent
+DeepseekV3.1,LLMcode/DeepseekV3.1/app.js,js-unsafe-innerhtml,ERROR,414,Direct assignment to innerHTML — potential XSS; consider sanitization or textContent
+DeepseekV3.1,LLMcode/DeepseekV3.1/app.js,js-unsafe-innerhtml,ERROR,426,Direct assignment to innerHTML — potential XSS; consider sanitization or textContent
+DeepseekV3.1,LLMcode/DeepseekV3.1/app.js,js-unsafe-innerhtml,ERROR,436,Direct assignment to innerHTML — potential XSS; consider sanitization or textContent
+DeepseekV3.1,LLMcode/DeepseekV3.1/app.js,js-unsafe-innerhtml,ERROR,465,Direct assignment to innerHTML — potential XSS; consider sanitization or textContent
+DeepseekV3.1,LLMcode/DeepseekV3.1/app.js,js-unsafe-innerhtml,ERROR,476,Direct assignment to innerHTML — potential XSS; consider sanitization or textContent
+DeepseekV3.1,LLMcode/DeepseekV3.1/app.js,js-unsafe-innerhtml,ERROR,484,Direct assignment to innerHTML — potential XSS; consider sanitization or textContent
+DeepseekV3.1,LLMcode/DeepseekV3.1/app.js,js-unsafe-innerhtml,ERROR,492,Direct assignment to innerHTML — potential XSS; consider sanitization or textContent
+DeepseekV3.1,LLMcode/DeepseekV3.1/app.js,js-unsafe-innerhtml,ERROR,503,Direct assignment to innerHTML — potential XSS; consider sanitization or textContent
+DeepseekV3.1,LLMcode/DeepseekV3.1/app.js,js-unsafe-innerhtml,ERROR,510,Direct assignment to innerHTML — potential XSS; consider sanitization or textContent
+GPT5,LLMcode/GPT5/app.js,js-localstorage-password,WARNING,67,localStorage used — ensure no plaintext passwords or secrets stored
+GPT5,LLMcode/GPT5/app.js,js-unsafe-innerhtml,ERROR,80,Direct assignment to innerHTML — potential XSS; consider sanitization or textContent
+GPT5,LLMcode/GPT5/app.js,js-unsafe-innerhtml,ERROR,150,Direct assignment to innerHTML — potential XSS; consider sanitization or textContent
+GPT5,LLMcode/GPT5/app.js,js-unsafe-innerhtml,ERROR,158,Direct assignment to innerHTML — potential XSS; consider sanitization or textContent
+GPT5,LLMcode/GPT5/app.js,js-unsafe-innerhtml,ERROR,162,Direct assignment to innerHTML — potential XSS; consider sanitization or textContent
+GPT5,LLMcode/GPT5/app.js,js-unsafe-innerhtml,ERROR,201,Direct assignment to innerHTML — potential XSS; consider sanitization or textContent
+GPT5,LLMcode/GPT5/app.js,js-unsafe-innerhtml,ERROR,253,Direct assignment to innerHTML — potential XSS; consider sanitization or textContent
+GPT5,LLMcode/GPT5/app.js,js-unsafe-innerhtml,ERROR,254,Direct assignment to innerHTML — potential XSS; consider sanitization or textContent
+GPT5,LLMcode/GPT5/app.js,js-unsafe-innerhtml,ERROR,255,Direct assignment to innerHTML — potential XSS; consider sanitization or textContent
+GPT5,LLMcode/GPT5/app.js,js-unsafe-innerhtml,ERROR,299,Direct assignment to innerHTML — potential XSS; consider sanitization or textContent
